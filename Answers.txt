@@ -1,0 +1,23 @@
+1. What is the difference between os.environ and os.getenv ?
+os.environ dictionary contains all the environment variables.
+os.environ[] raises an exception if the environmental variable does not exist
+vs. os.getenv() Python also provides to access environment variables does not raise an exception, but returns None
+2.What is the difference between json.dumps and json.dump?
+The json.dump() method used to write Python serialized object as JSON formatted data into a file
+and the json.dumps() method encodes any Python object into JSON formatted String.
+3. Why would this not work in python 2 and will work in python3?
+f = lambda x:print(x)
+A lambda's body has to be a single expression. In Python 2.x, print is a statement. However, in Python 3, print is a function (and a function application is an expression, so it will work in a lambda).
+4. What is the difference in the implementaion between python 2 and python 3 of
+this code?
+for i in range(10):
+    pass
+In Python 2 this code creates a list from number 0 to 9,and then iterates on this list.
+In Python 3 range(10) uses the generator to produce numbers. It doesn’t generate all numbers at once.
+It generates the next value only when for loop iteration asked for it. In each loop iteration, It generates the next value and assigns it to the iterator variable i.
+5.
+import os
+os.system("cat file.txt")
+pure python
+file = open("file.txt", "r").read()
+print (file)
